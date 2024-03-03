@@ -12,6 +12,17 @@
 .buildlog/
 .history
 .svn/
+android/
+build/
+ios/
+linux/
+macos/
+web/
+windows/
+.flutter-plugins
+.flutter-plugins-dependencies
+.gitignore
+pubspec.lock
 
 # IntelliJ related
 *.iml
