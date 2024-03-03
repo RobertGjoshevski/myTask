@@ -1,13 +1,19 @@
-
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:mytask/Classes/Task.dart';
 import 'package:mytask/Tabs/currentTask.dart';
 import 'package:mytask/Tabs/completedTask.dart';
 import 'package:mytask/settings.dart';
+//import 'package:excel/excel.dart';
+import 'package:hive/hive.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
+
+  var box = await Hive.openBox('mybox');
+
   runApp(TaskApp());
 }
 
@@ -19,7 +25,8 @@ final ValueNotifier<List<Task>> finishedTasks = ValueNotifier<List<Task>>([]);
 
 void addTask(Task newTask) {
   currentTasks.value.add(newTask);
-  currentTasks.notifyListeners(); // Notify listeners that a new task has been added
+  currentTasks
+      .notifyListeners(); // Notify listeners that a new task has been added
 }
 
 class TaskApp extends StatefulWidget {
@@ -52,7 +59,8 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(Icons.settings),
             onPressed: () {
               // Navigate to settings page
-              Navigator.push(context, MaterialPageRoute(builder: (_) => SettingsPage()));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => SettingsPage()));
             },
           ),
         ],
@@ -61,7 +69,8 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // Navigate to add task page
-          Navigator.push(context, MaterialPageRoute(builder: (_) => AddTaskPage()));
+          Navigator.push(
+              context, MaterialPageRoute(builder: (_) => AddTaskPage()));
         },
         child: Icon(Icons.add),
       ),
@@ -91,18 +100,16 @@ class _TaskTabsState extends State<TaskTabs> {
             child: TabBarView(
               children: [
                 ValueListenableBuilder(
-                  valueListenable: currentTasks,
-                  builder: (BuildContext context, List<Task> value, _) {
-                    return CurrentTasksTab(tasks: value);
-                  }
-                ),
+                    valueListenable: currentTasks,
+                    builder: (BuildContext context, List<Task> value, _) {
+                      return CurrentTasksTab(tasks: value);
+                    }),
                 ValueListenableBuilder(
-                  valueListenable: finishedTasks,
-                  builder: (BuildContext context, List<Task> value, Widget? child) {
-                    return FinishedTasksTab();
-                  }
-                ),
-                
+                    valueListenable: finishedTasks,
+                    builder: (BuildContext context, List<Task> value,
+                        Widget? child) {
+                      return FinishedTasksTab();
+                    }),
               ],
             ),
           ),
@@ -112,21 +119,22 @@ class _TaskTabsState extends State<TaskTabs> {
   }
 }
 
-
-
-
-
-
-
-
-
-
 class AddTaskPage extends StatefulWidget {
   @override
   State<AddTaskPage> createState() => _AddTaskPageState();
 }
 
 class _AddTaskPageState extends State<AddTaskPage> {
+  void writeData() {
+    _myBox.put(1, 'mich');
+  }
+
+  void readData() {
+    print(_myBox.get(1));
+  }
+
+  void deleteData() {}
+
   @override
   Widget build(BuildContext context) {
     TextEditingController titleController = TextEditingController();
@@ -135,20 +143,21 @@ class _AddTaskPageState extends State<AddTaskPage> {
       appBar: AppBar(title: Text('Add Task')),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-       // mainAxisAlignment: MainAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: TextField(
               controller: titleController,
               decoration: const InputDecoration(
-                labelText: 'Title',
-                labelStyle: TextStyle(  // Add this to change the label text style
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic,)
-                ),
+                  labelText: 'Title',
+                  labelStyle: TextStyle(
+                    // Add this to change the label text style
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                  )),
             ),
           ),
           Padding(

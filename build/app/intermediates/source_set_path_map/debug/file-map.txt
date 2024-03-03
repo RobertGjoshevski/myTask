@@ -1,0 +1,14 @@
+com.example.mytask.app-jetified-annotation-experimental-1.1.0-0 C:\Users\Mr.Mario\.gradle\caches\transforms-3\02315cc9f75263553d2042718fc375ee\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.mytask.app-jetified-window-1.0.0-beta04-1 C:\Users\Mr.Mario\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\res
+com.example.mytask.app-jetified-window-java-1.0.0-beta04-2 C:\Users\Mr.Mario\.gradle\caches\transforms-3\99750bb863b6fe460a7b5da8686e778d\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.mytask.app-core-1.6.0-3 C:\Users\Mr.Mario\.gradle\caches\transforms-3\d08c73bfb05384f2e52578171dbd141e\transformed\core-1.6.0\res
+com.example.mytask.app-debug-4 C:\flutter\myTask\android\app\src\debug\res
+com.example.mytask.app-main-5 C:\flutter\myTask\android\app\src\main\res
+com.example.mytask.app-pngs-6 C:\flutter\myTask\build\app\generated\res\pngs\debug
+com.example.mytask.app-resValues-7 C:\flutter\myTask\build\app\generated\res\resValues\debug
+com.example.mytask.app-rs-8 C:\flutter\myTask\build\app\generated\res\rs\debug
+com.example.mytask.app-mergeDebugResources-9 C:\flutter\myTask\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.mytask.app-mergeDebugResources-10 C:\flutter\myTask\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.mytask.app-merged_res-11 C:\flutter\myTask\build\app\intermediates\merged_res\debug
+com.example.mytask.app-packaged_res-12 C:\flutter\myTask\build\file_picker\intermediates\packaged_res\debug
+com.example.mytask.app-packaged_res-13 C:\flutter\myTask\build\flutter_plugin_android_lifecycle\intermediates\packaged_res\debug
