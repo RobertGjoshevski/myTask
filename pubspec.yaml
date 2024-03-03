@@ -40,6 +40,7 @@ dependencies:
   file_picker: ^6.1.1
   hive: ^2.2.3
   hive_flutter: ^1.1.0
+  creator: ^0.3.3
 
 dev_dependencies:
   hive_generator: ^1.1.3

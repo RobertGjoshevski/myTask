@@ -1,6 +1,6 @@
 import 'dart:typed_data';
 
-import 'package:creator/creator.dart';
+//import 'package:creator/creator.dart';
 import 'package:excel/excel.dart';
 import 'package:flutter/services.dart';
 import 'package:mytask/Classes/Task.dart';
@@ -85,7 +85,7 @@ Future<List> readExcel() async {
   return tasks;
 }
 
-Emitter excelEmitter = Emitter<List<dynamic>>((ref, emit) async {
-  final excelData = await readExcel();
-  emit(excelData);
-}, keepAlive: true);
+// Emitter excelEmitter = Emitter<List<dynamic>>((ref, emit) async {
+//   final excelData = await readExcel();
+//   emit(excelData);
+// }, keepAlive: true);

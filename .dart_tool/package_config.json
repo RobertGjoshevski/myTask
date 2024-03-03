@@ -128,6 +128,18 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "creator",
+      "rootUri": "file:///C:/Users/Robert/AppData/Local/Pub/Cache/hosted/pub.dev/creator-0.3.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "creator_core",
+      "rootUri": "file:///C:/Users/Robert/AppData/Local/Pub/Cache/hosted/pub.dev/creator_core-0.3.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "crypto",
       "rootUri": "file:///C:/Users/Robert/AppData/Local/Pub/Cache/hosted/pub.dev/crypto-3.0.3",
       "packageUri": "lib/",
@@ -578,7 +590,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-03-03T07:11:02.365055Z",
+  "generated": "2024-03-03T22:14:32.285665Z",
   "generator": "pub",
   "generatorVersion": "3.2.1"
 }
